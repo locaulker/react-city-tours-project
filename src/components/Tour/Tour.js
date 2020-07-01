@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./Tour.scss"
 
 class Tour extends Component {
   render() {
