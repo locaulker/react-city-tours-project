@@ -9,7 +9,11 @@ class TourList extends Component {
   }
 
   removeTour = id => {
-    console.log(id)
+    const { tours } = this.state
+    const filteredTours = tours.filter(tour => tour.id !== id)
+    this.setState({
+      tours: filteredTours,
+    })
   }
 
   render() {
