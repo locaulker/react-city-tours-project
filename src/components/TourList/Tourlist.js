@@ -3,9 +3,9 @@ import Tour from "../Tour/Tour"
 import "./TourList.scss"
 import { tourData } from "../../tourData"
 
-class Tourlist extends Component {
+class TourList extends Component {
   state = {
-    tours: tourData
+    tours: tourData,
   }
 
   removeTour = id => {
@@ -18,7 +18,7 @@ class Tourlist extends Component {
     const { tours } = this.state
 
     return (
-      <section className="tourlist">
+      <section className="tour-list">
         {tours.map(tour => (
           <Tour key={tour.id} tour={tour} removeTour={this.removeTour} />
         ))}
@@ -27,4 +27,4 @@ class Tourlist extends Component {
   }
 }
 
-export default Tourlist
+export default TourList
